@@ -7,145 +7,145 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		899F99C890563F6D78DF0E44 /* Pods_WelcomView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9081F1F6962712055D80412C /* Pods_WelcomView.framework */; };
+		393BCC06A543805E81C9D28A /* Pods_PictureBrowse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07252689012FF78182C7D198 /* Pods_PictureBrowse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04A9F0E12F35D03B00B5C877 /* WelcomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WelcomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9081F1F6962712055D80412C /* Pods_WelcomView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WelcomView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD0A04950D9AB79ABAD4340E /* Pods-WelcomView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelcomView.release.xcconfig"; path = "Target Support Files/Pods-WelcomView/Pods-WelcomView.release.xcconfig"; sourceTree = "<group>"; };
-		E44C1E53ECCC89405CCBFA52 /* Pods-WelcomView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelcomView.debug.xcconfig"; path = "Target Support Files/Pods-WelcomView/Pods-WelcomView.debug.xcconfig"; sourceTree = "<group>"; };
+		04C2CAE52F5588CB00EE4089 /* PictureBrowse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureBrowse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07252689012FF78182C7D198 /* Pods_PictureBrowse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PictureBrowse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EDF26D8D0BE580D802BBC64 /* Pods-PictureBrowse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictureBrowse.release.xcconfig"; path = "Target Support Files/Pods-PictureBrowse/Pods-PictureBrowse.release.xcconfig"; sourceTree = "<group>"; };
+		C87BF58DE9C1976101F3B315 /* Pods-PictureBrowse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictureBrowse.debug.xcconfig"; path = "Target Support Files/Pods-PictureBrowse/Pods-PictureBrowse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		04A9F0F32F35D03C00B5C877 /* Exceptions for "WelcomView" folder in "WelcomView" target */ = {
+		04C2CAF72F5588CC00EE4089 /* Exceptions for "PictureBrowse" folder in "PictureBrowse" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 04A9F0E02F35D03B00B5C877 /* WelcomView */;
+			target = 04C2CAE42F5588CB00EE4089 /* PictureBrowse */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		04A9F0E32F35D03B00B5C877 /* WelcomView */ = {
+		04C2CAE72F5588CB00EE4089 /* PictureBrowse */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				04A9F0F32F35D03C00B5C877 /* Exceptions for "WelcomView" folder in "WelcomView" target */,
+				04C2CAF72F5588CC00EE4089 /* Exceptions for "PictureBrowse" folder in "PictureBrowse" target */,
 			);
-			path = WelcomView;
+			path = PictureBrowse;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04A9F0DE2F35D03B00B5C877 /* Frameworks */ = {
+		04C2CAE22F5588CB00EE4089 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899F99C890563F6D78DF0E44 /* Pods_WelcomView.framework in Frameworks */,
+				393BCC06A543805E81C9D28A /* Pods_PictureBrowse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04A9F0D82F35D03B00B5C877 = {
+		04C2CADC2F5588CB00EE4089 = {
 			isa = PBXGroup;
 			children = (
-				04A9F0E32F35D03B00B5C877 /* WelcomView */,
-				04A9F0E22F35D03B00B5C877 /* Products */,
-				55F235877AF7FFAEB4A6B32C /* Pods */,
-				737F1C1156FC4DEE02CEF423 /* Frameworks */,
+				04C2CAE72F5588CB00EE4089 /* PictureBrowse */,
+				04C2CAE62F5588CB00EE4089 /* Products */,
+				229E2C52F069A707D61D9182 /* Pods */,
+				077E917EAFEDA7AD18FF6592 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		04A9F0E22F35D03B00B5C877 /* Products */ = {
+		04C2CAE62F5588CB00EE4089 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04A9F0E12F35D03B00B5C877 /* WelcomView.app */,
+				04C2CAE52F5588CB00EE4089 /* PictureBrowse.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		55F235877AF7FFAEB4A6B32C /* Pods */ = {
+		077E917EAFEDA7AD18FF6592 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E44C1E53ECCC89405CCBFA52 /* Pods-WelcomView.debug.xcconfig */,
-				BD0A04950D9AB79ABAD4340E /* Pods-WelcomView.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		737F1C1156FC4DEE02CEF423 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9081F1F6962712055D80412C /* Pods_WelcomView.framework */,
+				07252689012FF78182C7D198 /* Pods_PictureBrowse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		229E2C52F069A707D61D9182 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C87BF58DE9C1976101F3B315 /* Pods-PictureBrowse.debug.xcconfig */,
+				0EDF26D8D0BE580D802BBC64 /* Pods-PictureBrowse.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04A9F0E02F35D03B00B5C877 /* WelcomView */ = {
+		04C2CAE42F5588CB00EE4089 /* PictureBrowse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04A9F0F42F35D03C00B5C877 /* Build configuration list for PBXNativeTarget "WelcomView" */;
+			buildConfigurationList = 04C2CAF82F5588CC00EE4089 /* Build configuration list for PBXNativeTarget "PictureBrowse" */;
 			buildPhases = (
-				E8A7C73719C5D64F561F6A12 /* [CP] Check Pods Manifest.lock */,
-				04A9F0DD2F35D03B00B5C877 /* Sources */,
-				04A9F0DE2F35D03B00B5C877 /* Frameworks */,
-				04A9F0DF2F35D03B00B5C877 /* Resources */,
-				083A3F3CA7F620BC60F8E569 /* [CP] Embed Pods Frameworks */,
+				63D01FD39848A9302AAFBCE5 /* [CP] Check Pods Manifest.lock */,
+				04C2CAE12F5588CB00EE4089 /* Sources */,
+				04C2CAE22F5588CB00EE4089 /* Frameworks */,
+				04C2CAE32F5588CB00EE4089 /* Resources */,
+				421FF77DD7238F20DDD8E386 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				04A9F0E32F35D03B00B5C877 /* WelcomView */,
+				04C2CAE72F5588CB00EE4089 /* PictureBrowse */,
 			);
-			name = WelcomView;
-			productName = WelcomView;
-			productReference = 04A9F0E12F35D03B00B5C877 /* WelcomView.app */;
+			name = PictureBrowse;
+			productName = PictureBrowse;
+			productReference = 04C2CAE52F5588CB00EE4089 /* PictureBrowse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		04A9F0D92F35D03B00B5C877 /* Project object */ = {
+		04C2CADD2F5588CB00EE4089 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					04A9F0E02F35D03B00B5C877 = {
+					04C2CAE42F5588CB00EE4089 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = 04A9F0DC2F35D03B00B5C877 /* Build configuration list for PBXProject "WelcomView" */;
+			buildConfigurationList = 04C2CAE02F5588CB00EE4089 /* Build configuration list for PBXProject "PictureBrowse" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 04A9F0D82F35D03B00B5C877;
+			mainGroup = 04C2CADC2F5588CB00EE4089;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 04A9F0E22F35D03B00B5C877 /* Products */;
+			productRefGroup = 04C2CAE62F5588CB00EE4089 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04A9F0E02F35D03B00B5C877 /* WelcomView */,
+				04C2CAE42F5588CB00EE4089 /* PictureBrowse */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		04A9F0DF2F35D03B00B5C877 /* Resources */ = {
+		04C2CAE32F5588CB00EE4089 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -155,24 +155,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		083A3F3CA7F620BC60F8E569 /* [CP] Embed Pods Frameworks */ = {
+		421FF77DD7238F20DDD8E386 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WelcomView/Pods-WelcomView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PictureBrowse/Pods-PictureBrowse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WelcomView/Pods-WelcomView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PictureBrowse/Pods-PictureBrowse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WelcomView/Pods-WelcomView-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PictureBrowse/Pods-PictureBrowse-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8A7C73719C5D64F561F6A12 /* [CP] Check Pods Manifest.lock */ = {
+		63D01FD39848A9302AAFBCE5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,7 +191,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WelcomView-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PictureBrowse-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -197,7 +201,7 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		04A9F0DD2F35D03B00B5C877 /* Sources */ = {
+		04C2CAE12F5588CB00EE4089 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,19 +211,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		04A9F0F52F35D03C00B5C877 /* Debug */ = {
+		04C2CAF92F5588CC00EE4089 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E44C1E53ECCC89405CCBFA52 /* Pods-WelcomView.debug.xcconfig */;
+			baseConfigurationReference = C87BF58DE9C1976101F3B315 /* Pods-PictureBrowse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VPFNK6F84G;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WelcomView/Info.plist;
+				INFOPLIST_FILE = PictureBrowse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -231,9 +233,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Chausang.WelcomView;
+				PRODUCT_BUNDLE_IDENTIFIER = Chausang.PictureBrowse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -244,19 +245,17 @@
 			};
 			name = Debug;
 		};
-		04A9F0F62F35D03C00B5C877 /* Release */ = {
+		04C2CAFA2F5588CC00EE4089 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD0A04950D9AB79ABAD4340E /* Pods-WelcomView.release.xcconfig */;
+			baseConfigurationReference = 0EDF26D8D0BE580D802BBC64 /* Pods-PictureBrowse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VPFNK6F84G;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WelcomView/Info.plist;
+				INFOPLIST_FILE = PictureBrowse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -268,9 +267,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Chausang.WelcomView;
+				PRODUCT_BUNDLE_IDENTIFIER = Chausang.PictureBrowse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -281,7 +279,7 @@
 			};
 			name = Release;
 		};
-		04A9F0F72F35D03C00B5C877 /* Debug */ = {
+		04C2CAFB2F5588CC00EE4089 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -318,7 +316,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -339,12 +337,13 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		04A9F0F82F35D03C00B5C877 /* Release */ = {
+		04C2CAFC2F5588CC00EE4089 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -381,7 +380,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -395,6 +394,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -403,25 +403,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04A9F0DC2F35D03B00B5C877 /* Build configuration list for PBXProject "WelcomView" */ = {
+		04C2CAE02F5588CB00EE4089 /* Build configuration list for PBXProject "PictureBrowse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04A9F0F72F35D03C00B5C877 /* Debug */,
-				04A9F0F82F35D03C00B5C877 /* Release */,
+				04C2CAFB2F5588CC00EE4089 /* Debug */,
+				04C2CAFC2F5588CC00EE4089 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04A9F0F42F35D03C00B5C877 /* Build configuration list for PBXNativeTarget "WelcomView" */ = {
+		04C2CAF82F5588CC00EE4089 /* Build configuration list for PBXNativeTarget "PictureBrowse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04A9F0F52F35D03C00B5C877 /* Debug */,
-				04A9F0F62F35D03C00B5C877 /* Release */,
+				04C2CAF92F5588CC00EE4089 /* Debug */,
+				04C2CAFA2F5588CC00EE4089 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 04A9F0D92F35D03B00B5C877 /* Project object */;
+	rootObject = 04C2CADD2F5588CB00EE4089 /* Project object */;
 }

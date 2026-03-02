@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
     
-    var currentPage = 0
-    let imageNames = ["first","second","three"]
+    private lazy var mainScrollView = UIScrollView()
+    private lazy var mainPageControl = UIPageControl()
+    private var currentPage = 0
+    private let imageNames = ["first","second","three"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,17 +23,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         setupSubviews()
     }
     
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        // 获取视图尺寸
-//        let tempSize = view.bounds
-//        // 设置 UIScrollView
-//        mainScrollView.frame = tempSize
-//        mainScrollView.contentSize = CGSize(width: tempSize.width*CGFloat(imageNames.count), height: tempSize.height)
-//        // 设置 UIPageControl
-//        mainPageControl.frame = CGRect(x: 0, y: tempSize.height-30, width: tempSize.width, height: 20)
-//    }
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // 确保在布局完成后设置 contentSize
+        mainScrollView.contentSize = CGSize(
+            width: mainScrollView.bounds.width * CGFloat(imageNames.count),
+            height: mainScrollView.bounds.height
+        )
+    }
     
     // MARK: Private
 
@@ -37,60 +38,61 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     private func setupSubviews() {
         
         
-        
-//        // 新增图片
-//        for (index, value) in imageNames.enumerated() {
-//            let imageView = UIImageView()
-//            imageView.image = UIImage(named: value)
-//            imageView.clipsToBounds = true
-//            imageView.contentMode = .scaleAspectFill
-//            mainScrollView .addSubview(imageView)
-//            
-//        }
-        
-//        // 设置 UIScrollView
-//        mainScrollView.frame = CGRect(x: 0, y: 0, width: ScreenInfoManager.width, height: ScreenInfoManager.height)
-//        mainScrollView.contentSize = CGSize(width: ScreenInfoManager.width*CGFloat(imageNames.count), height: ScreenInfoManager.height)
+        // 设置 UIScrollView
+        mainScrollView.delegate = self
+        mainScrollView.isPagingEnabled = true
+        mainScrollView.showsVerticalScrollIndicator = false
+        mainScrollView.showsHorizontalScrollIndicator = false
         
         // UIPageControl
-//        mainPageControl.frame = CGRect(x: 0, y: ScreenInfoManager.height-30, width: ScreenInfoManager.width, height: 20)
         mainPageControl.currentPage = currentPage
         mainPageControl.numberOfPages = imageNames.count
+        mainPageControl.isEnabled = false
+        mainPageControl.pageIndicatorTintColor = .white
+        mainPageControl.currentPageIndicatorTintColor = .gray
         
         // 添加视图
         view.addSubview(mainScrollView)
         view.addSubview(mainPageControl)
         
+        // 设置约束
+        mainScrollView.snp.makeConstraints { make in
+            make.edges.equalTo(view)
+        }
+        mainPageControl.snp.makeConstraints { make in
+            make.left.right.equalTo(view)
+            make.bottom.equalTo(view).offset(-30)
+            make.height.equalTo(20)
+        }
         
+        
+        // 新增图片
+        for (index, value) in imageNames.enumerated() {
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: value)
+            imageView.clipsToBounds = true
+            imageView.contentMode = .scaleAspectFill
+            mainScrollView.addSubview(imageView)
+            imageView.snp.makeConstraints { make in
+                make.top.bottom.equalTo(mainScrollView)
+                make.width.equalTo(mainScrollView)
+                make.height.equalTo(mainScrollView)
+                // 使用 snp 的宽度属性
+                make.left.equalTo(mainScrollView.snp.left).offset(CGFloat(index) * UIScreen.main.bounds.width)
+            }
+        }
     }
     
     
     // MARK: UIScrollViewDelegate
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let number = Int(round(mainScrollView.contentOffset.x/ScreenInfoManager.width))
-//        if  number >= 0 && number <= 2 && number != currentPage {
-//            currentPage = number
-//            mainPageControl.currentPage = currentPage
-//        }
+        let number = Int(round(mainScrollView.contentOffset.x/UIScreen.main.bounds.width))
+        if  number >= 0 && number < imageNames.count && number != currentPage {
+            currentPage = number
+            mainPageControl.currentPage = currentPage
+        }
     }
     
-
-    // MARK: Lazy
-    
-    private lazy var mainScrollView : UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.delegate = self
-        scrollView.isPagingEnabled = true
-        return scrollView
-    }()
-    
-    private lazy var mainPageControl : UIPageControl = {
-        let pageControl = UIPageControl()
-        pageControl.isEnabled = false
-        pageControl.pageIndicatorTintColor = .white
-        pageControl.currentPageIndicatorTintColor = .gray
-        return pageControl
-    }()
 }
 
