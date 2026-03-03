@@ -18,5 +18,19 @@ class PictureBrowseModel: NSObject {
         self.descriptions = descriptions
         self.featuredImage = featuredImage
     }
+    
+    
+    static func createPictureBrowseModels() -> [PictureBrowseModel] {
+        return [
+//            PictureBrowseModel(title: "xxxxxx", descriptions: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", featuredImage: UIImage(named: "blue")),
+            PictureBrowseModel(title: "xxxxxx", descriptions: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", featuredImage: UIImage(named: "bodyline")),
+            PictureBrowseModel(title: "xxxxxx", descriptions: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", featuredImage: UIImage(named: "darkvarder")),
+            PictureBrowseModel(title: "xxxxxx", descriptions: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", featuredImage: UIImage(named: "dudu")),
+            PictureBrowseModel(title: "xxxxxx", descriptions: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", featuredImage: UIImage(named: "hello")),
+            PictureBrowseModel(title: "xxxxxx", descriptions: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", featuredImage: UIImage(named: "hhhhh")),
+            PictureBrowseModel(title: "xxxxxx", descriptions: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", featuredImage: UIImage(named: "wave")),
+        ]
+    }
+    
 
 }
