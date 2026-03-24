@@ -34,8 +34,8 @@ class ViewController: UIViewController {
         // 定位管理器
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // 精准度
-        locationManager.requestWhenInUseAuthorization()
-//        locationManager.requestAlwaysAuthorization() // 发送开启定位的请求
+//        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization() // 发送开启定位的请求
         
         // 地址显示文本
         locationDescribeLabel.text = "未定位"
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         locationButton.snp.makeConstraints { make in
             make.top.equalTo(locationDescribeLabel.snp.bottom).offset(12)
             make.left.right.equalTo(view).inset(30)
-            make.height.equalTo(60)
+            make.height.equalTo(80)
         }
     }
     
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     @objc func locationButtonAction(sender: UIButton) {
         // 判断定位服务是否开启
         if locationManager.authorizationStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
         }
         else {
             locationManager.startUpdatingLocation()
@@ -104,28 +104,33 @@ extension ViewController: CLLocationManagerDelegate {
         if let newLocal = locations.first {
             CLGeocoder().reverseGeocodeLocation(newLocal, completionHandler: { (pms, err) in
                 if (pms?.last?.location?.coordinate) != nil {
-                    manager.stopUpdatingLocation()//停止定位，节省电量，只获取一次定位
-                    //取得第一个地标，地标中存储了详细的地址信息，注意：一个地名可能搜索出多个地址
+                    manager.stopUpdatingLocation() // 停止定位，节省电量，只获取一次定位
+                    // 取得第一个地标，地标中存储了详细的地址信息，注意：一个地名可能搜索出多个地址
                     let placemark:CLPlacemark = (pms?.last)!
                     print(placemark)
-                    let name: String? = placemark.name;//地名
-                    let thoroughfare: String? = placemark.thoroughfare;//街道
-                    let subThoroughfare: String? = placemark.subThoroughfare; //街道相关信息，例如门牌等
+                    let name: String? = placemark.name;// 地名
+                    let thoroughfare: String? = placemark.thoroughfare;// 街道
+                    let subThoroughfare: String? = placemark.subThoroughfare; // 街道相关信息，例如门牌等
                     let locality: String? = placemark.locality; // 城市
+                    let country: String? = placemark.country; // 国家
+                    let components = [country, locality, name, thoroughfare, subThoroughfare]
+                        .compactMap({ $0 })
+                        .filter({ !$0.isEmpty })
+                        .reduce(into: [String]()) { $0.contains($1) ? () : $0.append($1) }
+                    self.locationDescribeLabel.text = components.joined(separator: " ")
                     // 别的含义
-                    // let location = placemark.location;//位置
-                    // let region = placemark.region;//区域
-                    // let addressDic = placemark.addressDictionary;//详细地址信息字典,包含以下部分信息
-                    // let subLocality=placemark.subLocality; // 城市相关信息，例如标志性建筑
-                    // let administrativeArea=placemark.administrativeArea; // 州
-                    // let subAdministrativeArea=placemark.subAdministrativeArea; //其他行政区域信息
-                    // let postalCode=placemark.postalCode; //邮编
-                    // let ISOcountryCode=placemark.ISOcountryCode; //国家编码
-                    // let country=placemark.country; //国家
-                    // let inlandWater=placemark.inlandWater; //水源、湖泊
-                    // let ocean=placemark.ocean; // 海洋
-                    // let areasOfInterest=placemark.areasOfInterest; //关联的或利益相关的地标
-                    self.locationDescribeLabel.text = String(name ?? "-")+String(thoroughfare ?? "-")+String(subThoroughfare ?? "-")+String(locality ?? "-")
+                    // let location = placemark.location; // 位置
+                    // let addressDic = placemark.addressDictionary; // 详细地址信息字典,包含以下部分信息
+                    // let subLocality = placemark.subLocality; // 城市相关信息，例如标志性建筑
+                    // let administrativeArea = placemark.administrativeArea; // 州
+                    // let subAdministrativeArea = placemark.subAdministrativeArea; // 其他行政区域信息
+                    // let postalCode = placemark.postalCode; // 邮编
+                    // let ISOcountryCode = placemark.ISOcountryCode; // 国家编码
+                    // let region = placemark.region; // 区域
+                    // let inlandWater = placemark.inlandWater; // 水源、湖泊
+                    // let ocean = placemark.ocean; // 海洋
+                    // let areasOfInterest = placemark.areasOfInterest; //关联的或利益相关的地标
+                    // self.locationDescribeLabel.text = String(country ?? "")+String(locality ?? "")+String(name ?? "")+String(thoroughfare ?? "")+String(subThoroughfare ?? "")
                 }
             })
         }
