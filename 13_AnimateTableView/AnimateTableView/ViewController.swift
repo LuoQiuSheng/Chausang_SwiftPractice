@@ -25,11 +25,11 @@ class ViewController: UIViewController {
         setupSubviews()
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        // 开始动画加载列表
-        startAnimateTableView()
-    }
+//    override func viewWillLayoutSubviews() {
+//        super.viewWillLayoutSubviews()
+//        // 开始动画加载列表
+//        startAnimateTableView()
+//    }
 
     /// 创建视图
     private func setupSubviews() {
@@ -49,6 +49,9 @@ class ViewController: UIViewController {
         mainTableView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
+        
+        // 开始动画加载列表
+        startAnimateTableView()
     }
     
     /// 开始动画加载列表
