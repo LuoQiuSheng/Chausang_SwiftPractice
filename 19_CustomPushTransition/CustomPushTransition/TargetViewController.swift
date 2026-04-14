@@ -33,6 +33,7 @@ class TargetViewController: UIViewController {
         
         // 背景图
         let backgroundImageView = UIImageView(image: UIImage(named: "8"))
+        backgroundImageView.contentMode = .scaleAspectFill
         view.addSubview(backgroundImageView)
         backgroundImageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -45,8 +46,8 @@ class TargetViewController: UIViewController {
 extension TargetViewController: UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> (any UIViewControllerAnimatedTransitioning)? {
-        if operation == .push {
-            return nil
+        if operation == .pop {
+            return PopAnimation()
         }
         else {
             return nil
