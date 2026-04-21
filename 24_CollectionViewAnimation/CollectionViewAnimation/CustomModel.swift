@@ -33,3 +33,33 @@ struct CustomModel {
     }
     
 }
+
+
+/**
+ 
+ struct UserModel: Codable {
+     let id: Int
+     let name: String
+     let age: Int
+ }
+ 
+ 
+ let dict: NSDictionary = [
+     "id": 1001,
+     "name": "小红",
+     "age": 18
+ ]
+
+ // 转换
+ do {
+     // 先转 Data
+     let data = try JSONSerialization.data(withJSONObject: dict)
+     // 再转模型
+     let user = try JSONDecoder().decode(UserModel.self, from: data)
+     print(user.name)
+ } catch {
+     print("解析失败：", error)
+ }
+ 
+ 
+ */
