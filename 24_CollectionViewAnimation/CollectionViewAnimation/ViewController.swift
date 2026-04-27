@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     let itemHeight = ScreenSizeUtils.SCREEN_HEIGHT/3-20
     
     var mainCollectionView: UICollectionView!
+    var dataSource = CustomModel.getModel()
     let reuseIdentifier = String(describing: CustomCollectionViewCell.self)
 
     override func viewDidLoad() {
@@ -38,6 +40,47 @@ class ViewController: UIViewController {
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
         mainCollectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        // 添加视图
+        view.addSubview(mainCollectionView)
+        // 设置约束
+        mainCollectionView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    // MARK: - Event
+    
+    // 选中处理
+    private func tableViewDidSelect(indexPath: IndexPath) {
+        // 判断滚动状态
+        if !mainCollectionView.isScrollEnabled {
+            return
+        }
+        // 判断 cell 对象有效性
+        guard let cell = mainCollectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell else {
+            return
+        }
+        // 禁止交互
+        mainCollectionView.isScrollEnabled = false
+        // 选中
+        cell.cellDidSelect()
+        // 动画效果
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       usingSpringWithDamping: 1,
+                       initialSpringVelocity: 1,
+                       options: [],
+                       animations: {
+            
+            cell.frame = CGRect(x: 10, y: self.mainCollectionView.contentOffset.y, width: ScreenSizeUtils.SCREEN_WIDTH-20, height: ScreenSizeUtils.SCREEN_HEIGHT)
+            cell.imageView.frame = cell.bounds
+            cell.textView.frame = CGRect(x: 0, y: ScreenSizeUtils.SCREEN_HEIGHT-60, width: ScreenSizeUtils.SCREEN_WIDTH-20, height: 60)
+            
+        }) { (finish) in
+            
+        }
+        
     }
 
 }
@@ -50,17 +93,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        // 选中处理
+        tableViewDidSelect(indexPath: indexPath)
     }
     
     
     // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return (dataSource?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCollectionViewCell
+        cell.prepareCell(model: (dataSource?[indexPath.row])!)
         return cell
     }
     

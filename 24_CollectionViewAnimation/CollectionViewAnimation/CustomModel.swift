@@ -10,11 +10,11 @@ import Foundation
 // 数据结构体
 struct CustomModel {
     
-    let imageView: String
+    let imageName: String
     let title: String
     
-    init(imageView: String, title: String) {
-        self.imageView = imageView
+    init(imageName: String, title: String) {
+        self.imageName = imageName
         self.title = title
     }
     
@@ -26,7 +26,7 @@ struct CustomModel {
         
         var result = [CustomModel]()
         for (index, name) in imageNames.enumerated() {
-            let tempModel = CustomModel(imageView: name, title: titles[index])
+            let tempModel = CustomModel(imageName: name, title: titles[index])
             result.append(tempModel)
         }
         return result
