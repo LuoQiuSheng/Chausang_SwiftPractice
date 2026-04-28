@@ -14,6 +14,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     let textView = UITextView()
     let backButton = UIButton(type: .custom)
     
+    var backButtonDidClick: (()->())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +33,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     // 创建视图
     private func setupSubviews() {
         
-        imageView.contentMode = .center
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         
         textView.font = UIFont.systemFont(ofSize: 14)
@@ -65,7 +66,10 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     // 返回按钮
     @objc private func backButtonAction(sender: UIButton) {
-        
+        // 隐藏按钮
+        sender.isHidden = true
+        // 闭包
+        backButtonDidClick!()
     }
     
     // MARK: - Public

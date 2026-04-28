@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         view.addSubview(mainCollectionView)
         // 设置约束
         mainCollectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: ScreenSizeUtils.STATUSBAR_HEIGHT, left: 0, bottom: 0, right: 0))
         }
     }
     
@@ -65,6 +65,12 @@ class ViewController: UIViewController {
         mainCollectionView.isScrollEnabled = false
         // 选中
         cell.cellDidSelect()
+        // 返回
+        cell.backButtonDidClick = {
+            print("闭包执行")
+            self.mainCollectionView.isScrollEnabled = true
+            self.mainCollectionView.reloadItems(at: [indexPath])
+        }
         // 动画效果
         UIView.animate(withDuration: 1,
                        delay: 0,
@@ -73,12 +79,12 @@ class ViewController: UIViewController {
                        options: [],
                        animations: {
             
-            cell.frame = CGRect(x: 10, y: self.mainCollectionView.contentOffset.y, width: ScreenSizeUtils.SCREEN_WIDTH-20, height: ScreenSizeUtils.SCREEN_HEIGHT)
+            cell.frame = CGRect(x: 0, y: self.mainCollectionView.contentOffset.y, width:ScreenSizeUtils.SCREEN_WIDTH , height: ScreenSizeUtils.SCREEN_HEIGHT - ScreenSizeUtils.STATUSBAR_HEIGHT)
             cell.imageView.frame = cell.bounds
-            cell.textView.frame = CGRect(x: 0, y: ScreenSizeUtils.SCREEN_HEIGHT-60, width: ScreenSizeUtils.SCREEN_WIDTH-20, height: 60)
+            cell.textView.frame = CGRect(x: 0, y: cell.bounds.height-60, width: cell.bounds.width, height: 60)
             
         }) { (finish) in
-            
+            print("动画结束")
         }
         
     }
