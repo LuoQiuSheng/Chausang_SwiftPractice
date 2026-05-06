@@ -6,59 +6,54 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		0407A4FA2FAB7850007CB01E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0407A4F92FAB7850007CB01E /* SnapKit */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		04AB57D42FA0EFF900B35974 /* SwipeableCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeableCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0407A50A2FAB83CD007CB01E /* SortableCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortableCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		04AB57E62FA0EFFB00B35974 /* Exceptions for "SwipeableCell" folder in "SwipeableCell" target */ = {
+		0407A51C2FAB83CF007CB01E /* Exceptions for "SortableCollectionView" folder in "SortableCollectionView" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 04AB57D32FA0EFF900B35974 /* SwipeableCell */;
+			target = 0407A5092FAB83CD007CB01E /* SortableCollectionView */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		04AB57D62FA0EFF900B35974 /* SwipeableCell */ = {
+		0407A50C2FAB83CD007CB01E /* SortableCollectionView */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				04AB57E62FA0EFFB00B35974 /* Exceptions for "SwipeableCell" folder in "SwipeableCell" target */,
+				0407A51C2FAB83CF007CB01E /* Exceptions for "SortableCollectionView" folder in "SortableCollectionView" target */,
 			);
-			path = SwipeableCell;
+			path = SortableCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04AB57D12FA0EFF900B35974 /* Frameworks */ = {
+		0407A5072FAB83CD007CB01E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0407A4FA2FAB7850007CB01E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04AB57CB2FA0EFF900B35974 = {
+		0407A5012FAB83CD007CB01E = {
 			isa = PBXGroup;
 			children = (
-				04AB57D62FA0EFF900B35974 /* SwipeableCell */,
-				04AB57D52FA0EFF900B35974 /* Products */,
+				0407A50C2FAB83CD007CB01E /* SortableCollectionView */,
+				0407A50B2FAB83CD007CB01E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		04AB57D52FA0EFF900B35974 /* Products */ = {
+		0407A50B2FAB83CD007CB01E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04AB57D42FA0EFF900B35974 /* SwipeableCell.app */,
+				0407A50A2FAB83CD007CB01E /* SortableCollectionView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,68 +61,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04AB57D32FA0EFF900B35974 /* SwipeableCell */ = {
+		0407A5092FAB83CD007CB01E /* SortableCollectionView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04AB57E72FA0EFFB00B35974 /* Build configuration list for PBXNativeTarget "SwipeableCell" */;
+			buildConfigurationList = 0407A51D2FAB83CF007CB01E /* Build configuration list for PBXNativeTarget "SortableCollectionView" */;
 			buildPhases = (
-				04AB57D02FA0EFF900B35974 /* Sources */,
-				04AB57D12FA0EFF900B35974 /* Frameworks */,
-				04AB57D22FA0EFF900B35974 /* Resources */,
+				0407A5062FAB83CD007CB01E /* Sources */,
+				0407A5072FAB83CD007CB01E /* Frameworks */,
+				0407A5082FAB83CD007CB01E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				04AB57D62FA0EFF900B35974 /* SwipeableCell */,
+				0407A50C2FAB83CD007CB01E /* SortableCollectionView */,
 			);
-			name = SwipeableCell;
+			name = SortableCollectionView;
 			packageProductDependencies = (
-				0407A4F92FAB7850007CB01E /* SnapKit */,
 			);
-			productName = SwipeableCell;
-			productReference = 04AB57D42FA0EFF900B35974 /* SwipeableCell.app */;
+			productName = SortableCollectionView;
+			productReference = 0407A50A2FAB83CD007CB01E /* SortableCollectionView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		04AB57CC2FA0EFF900B35974 /* Project object */ = {
+		0407A5022FAB83CD007CB01E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					04AB57D32FA0EFF900B35974 = {
+					0407A5092FAB83CD007CB01E = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 04AB57CF2FA0EFF900B35974 /* Build configuration list for PBXProject "SwipeableCell" */;
+			buildConfigurationList = 0407A5052FAB83CD007CB01E /* Build configuration list for PBXProject "SortableCollectionView" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 04AB57CB2FA0EFF900B35974;
+			mainGroup = 0407A5012FAB83CD007CB01E;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				0407A4F82FAB7850007CB01E /* XCRemoteSwiftPackageReference "SnapKit" */,
-			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 04AB57D52FA0EFF900B35974 /* Products */;
+			productRefGroup = 0407A50B2FAB83CD007CB01E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04AB57D32FA0EFF900B35974 /* SwipeableCell */,
+				0407A5092FAB83CD007CB01E /* SortableCollectionView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		04AB57D22FA0EFF900B35974 /* Resources */ = {
+		0407A5082FAB83CD007CB01E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,7 +128,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		04AB57D02FA0EFF900B35974 /* Sources */ = {
+		0407A5062FAB83CD007CB01E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -147,7 +138,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		04AB57E82FA0EFFB00B35974 /* Debug */ = {
+		0407A51E2FAB83CF007CB01E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -156,19 +147,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VPFNK6F84G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwipeableCell/Info.plist;
+				INFOPLIST_FILE = SortableCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chausang.test.SwipeableCell;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chausang.test.SortableCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -180,7 +170,7 @@
 			};
 			name = Debug;
 		};
-		04AB57E92FA0EFFB00B35974 /* Release */ = {
+		0407A51F2FAB83CF007CB01E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -189,19 +179,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VPFNK6F84G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwipeableCell/Info.plist;
+				INFOPLIST_FILE = SortableCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chausang.test.SwipeableCell;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chausang.test.SortableCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -213,7 +202,7 @@
 			};
 			name = Release;
 		};
-		04AB57EA2FA0EFFB00B35974 /* Debug */ = {
+		0407A5202FAB83CF007CB01E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,7 +266,7 @@
 			};
 			name = Debug;
 		};
-		04AB57EB2FA0EFFB00B35974 /* Release */ = {
+		0407A5212FAB83CF007CB01E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -337,44 +326,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04AB57CF2FA0EFF900B35974 /* Build configuration list for PBXProject "SwipeableCell" */ = {
+		0407A5052FAB83CD007CB01E /* Build configuration list for PBXProject "SortableCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04AB57EA2FA0EFFB00B35974 /* Debug */,
-				04AB57EB2FA0EFFB00B35974 /* Release */,
+				0407A5202FAB83CF007CB01E /* Debug */,
+				0407A5212FAB83CF007CB01E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04AB57E72FA0EFFB00B35974 /* Build configuration list for PBXNativeTarget "SwipeableCell" */ = {
+		0407A51D2FAB83CF007CB01E /* Build configuration list for PBXNativeTarget "SortableCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04AB57E82FA0EFFB00B35974 /* Debug */,
-				04AB57E92FA0EFFB00B35974 /* Release */,
+				0407A51E2FAB83CF007CB01E /* Debug */,
+				0407A51F2FAB83CF007CB01E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0407A4F82FAB7850007CB01E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0407A4F92FAB7850007CB01E /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0407A4F82FAB7850007CB01E /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 04AB57CC2FA0EFF900B35974 /* Project object */;
+	rootObject = 0407A5022FAB83CD007CB01E /* Project object */;
 }
