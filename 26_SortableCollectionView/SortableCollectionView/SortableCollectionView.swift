@@ -7,9 +7,18 @@
 
 import UIKit
 
+
 @objc protocol SortableCollectionViewDelegate {
-    
+    // 开始拖动
+    @objc optional func beginDragAndInitDragCell(collectionView: SortableCollectionView, dragCell: UIView)
+    // 结束拖动（快照）
+    @objc optional func endDragAndResetDragCell(collectionView: SortableCollectionView, dragCell: UIView)
+    // 结束拖动（真实单元格）
+    @objc optional func endDragAndOperateRealCell(collectionView: SortableCollectionView, dragCell: UIView, isMoved: Bool)
+    // 交换数据
+    @objc optional func exchangeDataSource(fromIndex: IndexPath, toIndex: IndexPath)
 }
+
 
 class SortableCollectionView: UICollectionView {
 
@@ -52,11 +61,13 @@ class SortableCollectionView: UICollectionView {
         }
         // 手势改变
         else if sender.state == .changed {
-            
+            // 更新移动
+            updateMoveItem(viewPoint: viewPoint, collectionViewPoint: collectionViewPoint)
         }
         // 手势抬起
         else if sender.state == .ended {
-            
+            // 结束移动
+            endMoveItem()
         }
         
     }
@@ -74,11 +85,107 @@ extension SortableCollectionView {
         cell.isHidden = true
         // 如果遵循了nscopying协议，并返回了副本的，可以用copy来获得view的副本
         if let copyable = originCell as? NSCopying {
-            let copiedView = copyable.copy(with: nil) as! UIView {
-                dragView = copiedView
-            }
+            let copiedView = copyable.copy(with: nil) as! UIView
+            dragView = copiedView
         } else {
-            
+            // 该方法在模拟器里面无法获得快照，真机是可以的
+            dragView = cell.snapshotView(afterScreenUpdates: false)
+        }
+        // 将快照添加到父view
+        dragView.center = viewCenter
+        dragView.autoresizesSubviews = false
+        superview?.addSubview(dragView)
+        bringSubviewToFront(dragView)
+        // 触发代理-开始拖动
+        sortableDelegate?.beginDragAndInitDragCell?(collectionView: self, dragCell: dragView)
+    }
+    
+    // 更新移动
+    private func updateMoveItem(viewPoint: CGPoint, collectionViewPoint: CGPoint) {
+        // 移动快照位置
+        dragView.center = viewPoint
+        // 移动
+        moveItemToPotin(collectionViewPoint: collectionViewPoint)
+        // 边缘滚动
+        scrollAtEdge()
+    }
+    
+    // 移动结束
+    private func endMoveItem() {
+        // 移动定时器
+        timer?.invalidate()
+        timer = nil
+        // 获取指定单元格
+        if let origin = originCell {
+            UIView.animate(withDuration: 0.2) {
+                // 协议
+                self.sortableDelegate?.endDragAndResetDragCell?(collectionView: self, dragCell:  self.dragView)
+                // 重置尺寸
+                let rect = origin.frame
+                self.dragView.frame = CGRect(x: rect.origin.x, y: rect.origin.y - self.contentOffset.y, width: rect.width, height: rect.height)
+            } completion: { (finish) in
+                // 移除视图
+                self.dragView.removeFromSuperview()
+                // 显示
+                origin.isHidden = false
+                // 判断是否已移动
+                var isMoved = false
+                if let toIndex = self.toIndex {
+                    // 交换数据
+                    self.sortableDelegate?.exchangeDataSource?(fromIndex: self.fromIndex, toIndex: toIndex)
+                    isMoved = true
+                }
+                // 结束移动
+                self.sortableDelegate?.endDragAndOperateRealCell?(collectionView: self, dragCell: origin, isMoved: isMoved)
+            }
         }
     }
+    
+    // 移动
+    private func moveItemToPotin(collectionViewPoint: CGPoint) {
+        if let index = indexPathForItem(at: collectionViewPoint),
+           let originCell = self.originCell {
+            let cell = cellForItem(at: index)
+            if cell != originCell {
+                self.performBatchUpdates {
+                    if let fromIndex = self.indexPath(for: originCell) {
+                        self.moveItem(at: fromIndex, to: index)
+                    }
+                } completion: { (success) in
+                    if success {
+                        self.toIndex = index
+                    }
+                }
+            }
+        }
+    }
+    
+    // 边缘滚动
+    private func scrollAtEdge() {
+        
+        let pinTop = dragView.frame.origin.y
+        let pinBottom = self.frame.height - (dragView.frame.origin.y + dragView.frame.height)
+        
+        var speed: CGFloat = 0
+        var isTop: Bool = true
+        
+        if pinTop < 0 {
+            speed = -pinTop
+            isTop = true
+        }
+        else if pinBottom < 0 {
+            speed = -pinBottom
+            isTop = false
+        }
+        else {
+            self.timer?.invalidate()
+            self.timer = nil
+            return
+        }
+        
+        if let originTimer = self.timer
+            let originSpeed = 
+        
+    }
+    
 }
