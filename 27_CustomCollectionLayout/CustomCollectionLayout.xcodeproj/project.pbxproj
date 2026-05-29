@@ -7,58 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0406F2212FC95F4900D2711E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0406F2202FC95F4900D2711E /* SnapKit */; };
+		0406F2792FC988D000D2711E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0406F2782FC988D000D2711E /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0407A50A2FAB83CD007CB01E /* SortableCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortableCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0406F24A2FC9716000D2711E /* CustomCollectionLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCollectionLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0407A51C2FAB83CF007CB01E /* Exceptions for "SortableCollectionView" folder in "SortableCollectionView" target */ = {
+		0406F25C2FC9716000D2711E /* Exceptions for "CustomCollectionLayout" folder in "CustomCollectionLayout" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 0407A5092FAB83CD007CB01E /* SortableCollectionView */;
+			target = 0406F2492FC9716000D2711E /* CustomCollectionLayout */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0407A50C2FAB83CD007CB01E /* SortableCollectionView */ = {
+		0406F24C2FC9716000D2711E /* CustomCollectionLayout */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0407A51C2FAB83CF007CB01E /* Exceptions for "SortableCollectionView" folder in "SortableCollectionView" target */,
+				0406F25C2FC9716000D2711E /* Exceptions for "CustomCollectionLayout" folder in "CustomCollectionLayout" target */,
 			);
-			path = SortableCollectionView;
+			path = CustomCollectionLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0407A5072FAB83CD007CB01E /* Frameworks */ = {
+		0406F2472FC9716000D2711E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0406F2212FC95F4900D2711E /* SnapKit in Frameworks */,
+				0406F2792FC988D000D2711E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0407A5012FAB83CD007CB01E = {
+		0406F2412FC9716000D2711E = {
 			isa = PBXGroup;
 			children = (
-				0407A50C2FAB83CD007CB01E /* SortableCollectionView */,
-				0407A50B2FAB83CD007CB01E /* Products */,
+				0406F24C2FC9716000D2711E /* CustomCollectionLayout */,
+				0406F24B2FC9716000D2711E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0407A50B2FAB83CD007CB01E /* Products */ = {
+		0406F24B2FC9716000D2711E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0407A50A2FAB83CD007CB01E /* SortableCollectionView.app */,
+				0406F24A2FC9716000D2711E /* CustomCollectionLayout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,68 +66,68 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0407A5092FAB83CD007CB01E /* SortableCollectionView */ = {
+		0406F2492FC9716000D2711E /* CustomCollectionLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0407A51D2FAB83CF007CB01E /* Build configuration list for PBXNativeTarget "SortableCollectionView" */;
+			buildConfigurationList = 0406F25D2FC9716000D2711E /* Build configuration list for PBXNativeTarget "CustomCollectionLayout" */;
 			buildPhases = (
-				0407A5062FAB83CD007CB01E /* Sources */,
-				0407A5072FAB83CD007CB01E /* Frameworks */,
-				0407A5082FAB83CD007CB01E /* Resources */,
+				0406F2462FC9716000D2711E /* Sources */,
+				0406F2472FC9716000D2711E /* Frameworks */,
+				0406F2482FC9716000D2711E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0407A50C2FAB83CD007CB01E /* SortableCollectionView */,
+				0406F24C2FC9716000D2711E /* CustomCollectionLayout */,
 			);
-			name = SortableCollectionView;
+			name = CustomCollectionLayout;
 			packageProductDependencies = (
-				0406F2202FC95F4900D2711E /* SnapKit */,
+				0406F2782FC988D000D2711E /* SnapKit */,
 			);
-			productName = SortableCollectionView;
-			productReference = 0407A50A2FAB83CD007CB01E /* SortableCollectionView.app */;
+			productName = CustomCollectionLayout;
+			productReference = 0406F24A2FC9716000D2711E /* CustomCollectionLayout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0407A5022FAB83CD007CB01E /* Project object */ = {
+		0406F2422FC9716000D2711E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2600;
-				LastUpgradeCheck = 2600;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					0407A5092FAB83CD007CB01E = {
-						CreatedOnToolsVersion = 26.0.1;
+					0406F2492FC9716000D2711E = {
+						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = 0407A5052FAB83CD007CB01E /* Build configuration list for PBXProject "SortableCollectionView" */;
+			buildConfigurationList = 0406F2452FC9716000D2711E /* Build configuration list for PBXProject "CustomCollectionLayout" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 0407A5012FAB83CD007CB01E;
+			mainGroup = 0406F2412FC9716000D2711E;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				0406F21F2FC95F4900D2711E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0406F2772FC988D000D2711E /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 0407A50B2FAB83CD007CB01E /* Products */;
+			productRefGroup = 0406F24B2FC9716000D2711E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0407A5092FAB83CD007CB01E /* SortableCollectionView */,
+				0406F2492FC9716000D2711E /* CustomCollectionLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0407A5082FAB83CD007CB01E /* Resources */ = {
+		0406F2482FC9716000D2711E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,7 +137,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0407A5062FAB83CD007CB01E /* Sources */ = {
+		0406F2462FC9716000D2711E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -147,7 +147,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0407A51E2FAB83CF007CB01E /* Debug */ = {
+		0406F25E2FC9716000D2711E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -156,19 +156,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VPFNK6F84G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SortableCollectionView/Info.plist;
+				INFOPLIST_FILE = CustomCollectionLayout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chausang.test.SortableCollectionView;
+				PRODUCT_BUNDLE_IDENTIFIER = Chausang.CustomCollectionLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -180,7 +180,7 @@
 			};
 			name = Debug;
 		};
-		0407A51F2FAB83CF007CB01E /* Release */ = {
+		0406F25F2FC9716000D2711E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -189,19 +189,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VPFNK6F84G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SortableCollectionView/Info.plist;
+				INFOPLIST_FILE = CustomCollectionLayout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chausang.test.SortableCollectionView;
+				PRODUCT_BUNDLE_IDENTIFIER = Chausang.CustomCollectionLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -213,7 +213,7 @@
 			};
 			name = Release;
 		};
-		0407A5202FAB83CF007CB01E /* Debug */ = {
+		0406F2602FC9716000D2711E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -277,7 +277,7 @@
 			};
 			name = Debug;
 		};
-		0407A5212FAB83CF007CB01E /* Release */ = {
+		0406F2612FC9716000D2711E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -324,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -337,20 +337,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0407A5052FAB83CD007CB01E /* Build configuration list for PBXProject "SortableCollectionView" */ = {
+		0406F2452FC9716000D2711E /* Build configuration list for PBXProject "CustomCollectionLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0407A5202FAB83CF007CB01E /* Debug */,
-				0407A5212FAB83CF007CB01E /* Release */,
+				0406F2602FC9716000D2711E /* Debug */,
+				0406F2612FC9716000D2711E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0407A51D2FAB83CF007CB01E /* Build configuration list for PBXNativeTarget "SortableCollectionView" */ = {
+		0406F25D2FC9716000D2711E /* Build configuration list for PBXNativeTarget "CustomCollectionLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0407A51E2FAB83CF007CB01E /* Debug */,
-				0407A51F2FAB83CF007CB01E /* Release */,
+				0406F25E2FC9716000D2711E /* Debug */,
+				0406F25F2FC9716000D2711E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -358,7 +358,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0406F21F2FC95F4900D2711E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		0406F2772FC988D000D2711E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -369,12 +369,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0406F2202FC95F4900D2711E /* SnapKit */ = {
+		0406F2782FC988D000D2711E /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0406F21F2FC95F4900D2711E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 0406F2772FC988D000D2711E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 0407A5022FAB83CD007CB01E /* Project object */;
+	rootObject = 0406F2422FC9716000D2711E /* Project object */;
 }

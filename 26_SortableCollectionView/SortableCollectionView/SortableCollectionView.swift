@@ -105,7 +105,7 @@ extension SortableCollectionView {
         // 移动快照位置
         dragView.center = viewPoint
         // 移动
-        moveItemToPotin(collectionViewPoint: collectionViewPoint)
+        moveItemToPoint(collectionViewPoint: collectionViewPoint)
         // 边缘滚动
         scrollAtEdge()
     }
@@ -142,7 +142,7 @@ extension SortableCollectionView {
     }
     
     // 移动
-    private func moveItemToPotin(collectionViewPoint: CGPoint) {
+    private func moveItemToPoint(collectionViewPoint: CGPoint) {
         if let index = indexPathForItem(at: collectionViewPoint),
            let originCell = self.originCell {
             let cell = cellForItem(at: index)
@@ -183,9 +183,40 @@ extension SortableCollectionView {
             return
         }
         
-        if let originTimer = self.timer
-            let originSpeed = 
+        if let originTimer = self.timer,
+            let originSpeed = (originTimer.userInfo as? [String:AnyObject])?["speed"] as? CGFloat {
+            if abs(speed - originSpeed) > 10 {
+                originTimer.invalidate()
+                NSLog("speed:\(speed)")
+                let timer = Timer(timeInterval: 1/60.0, target: self, selector: #selector(autoScroll(timer:)), userInfo: ["top":isTop,"speed": speed] , repeats: true)
+                self.timer = timer
+                RunLoop.main.add(timer, forMode: .common)
+            }
+        } else {
+            let timer = Timer(timeInterval: 1/60.0, target: self, selector: #selector(autoScroll(timer:)), userInfo: ["top":isTop,"speed": speed] , repeats: true)
+            self.timer = timer
+            RunLoop.main.add(timer, forMode: .common)
+        }
         
+    }
+    
+    // 自动滚动
+    @objc private func autoScroll(timer: Timer) {
+        if let userInfo = timer.userInfo as? [String:AnyObject] {
+            if let top =  userInfo["top"] as? Bool,let speed = userInfo["speed"] as? CGFloat {
+                let offset = speed / 5
+                let contentOffset = self.contentOffset
+                if top {
+                    self.contentOffset.y -= offset
+                    self.contentOffset.y = self.contentOffset.y < 0 ? 0 : self.contentOffset.y
+                }else {
+                    self.contentOffset.y += offset
+                    self.contentOffset.y = self.contentOffset.y > self.contentSize.height - self.frame.height ? self.contentSize.height - self.frame.height  : self.contentOffset.y
+                }
+                let point = CGPoint(x: dragView.center.x, y: dragView.center.y + contentOffset.y)
+                self.moveItemToPoint(collectionViewPoint: point)
+            }
+        }
     }
     
 }
