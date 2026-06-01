@@ -1,0 +1,48 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "7f152e4e9a71326a25e2b35435e226b32aa532d1b76db93ad38a0cf5d9848a9e"
+    }
+  ],
+  "containerPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/MosaicLayout.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Products",
+      "derivedDataPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/PrecompiledHeaders",
+      "indexRegularBuildIntermediatesPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Build/Intermediates.noindex",
+      "indexRegularBuildProductsPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Build/Products",
+      "pchPath" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

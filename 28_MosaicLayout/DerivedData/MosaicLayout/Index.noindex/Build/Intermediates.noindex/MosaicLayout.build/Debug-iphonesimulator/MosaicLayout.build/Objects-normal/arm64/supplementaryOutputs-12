@@ -1,0 +1,10 @@
+{
+  "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/MosaicLayout/AppDelegate.swift" : {
+    "abi-baseline-json" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Intermediates.noindex/MosaicLayout.build/Debug-iphonesimulator/MosaicLayout.build/Objects-normal/arm64/MosaicLayout.abi.json",
+    "dependencies" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Intermediates.noindex/MosaicLayout.build/Debug-iphonesimulator/MosaicLayout.build/Objects-normal/arm64/MosaicLayout-primary.d",
+    "diagnostics" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Intermediates.noindex/MosaicLayout.build/Debug-iphonesimulator/MosaicLayout.build/Objects-normal/arm64/MosaicLayout-primary.dia",
+    "objc-header" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Intermediates.noindex/MosaicLayout.build/Debug-iphonesimulator/MosaicLayout.build/Objects-normal/arm64/MosaicLayout-Swift.h",
+    "swiftdoc" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Intermediates.noindex/MosaicLayout.build/Debug-iphonesimulator/MosaicLayout.build/Objects-normal/arm64/MosaicLayout.swiftdoc",
+    "swiftsourceinfo" : "/Users/mac/Desktop/Chausang_SwiftPractice/28_MosaicLayout/DerivedData/MosaicLayout/Index.noindex/Build/Intermediates.noindex/MosaicLayout.build/Debug-iphonesimulator/MosaicLayout.build/Objects-normal/arm64/MosaicLayout.swiftsourceinfo"
+  }
+}
