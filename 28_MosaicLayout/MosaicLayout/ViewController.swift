@@ -28,13 +28,13 @@ class ViewController: UIViewController {
         
         // 创建布局
         let collectionLayout = FMMosaicLayout()
-//        collectionLayout.delegate = self
         
         // 创建视图
         collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: collectionLayout)
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
+//        collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.register(CustomHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseHeaderIdentifier)
         collectionView.register(CustomHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: reuseHeaderIdentifier)
