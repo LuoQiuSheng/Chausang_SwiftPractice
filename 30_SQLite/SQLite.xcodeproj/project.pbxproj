@@ -14,6 +14,7 @@
 		043BDC1E2FCECF5E002F0817 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BDC162FCECF5E002F0817 /* SceneDelegate.swift */; };
 		043BDC1F2FCECF5E002F0817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BDC172FCECF5E002F0817 /* ViewController.swift */; };
 		043BDC222FCEDE95002F0817 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 043BDC212FCEDE95002F0817 /* SnapKit */; };
+		0451E7672FD002EE00DD6156 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451E7662FD002EE00DD6156 /* DBManager.swift */; };
 		57A65B148E46C9A9F04338BD /* Pods_SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025CDDCDE3DD8423EADFB302 /* Pods_SQLite.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		043BDC142FCECF5E002F0817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		043BDC162FCECF5E002F0817 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		043BDC172FCECF5E002F0817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0451E7662FD002EE00DD6156 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		682D278877B1E32EBE897869 /* Pods-SQLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLite.debug.xcconfig"; path = "Target Support Files/Pods-SQLite/Pods-SQLite.debug.xcconfig"; sourceTree = "<group>"; };
 		BB67C3F7275CB95C62A9E319 /* Pods-SQLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLite.release.xcconfig"; path = "Target Support Files/Pods-SQLite/Pods-SQLite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				043BDC152FCECF5E002F0817 /* Main.storyboard */,
 				043BDC162FCECF5E002F0817 /* SceneDelegate.swift */,
 				043BDC172FCECF5E002F0817 /* ViewController.swift */,
+				0451E7662FD002EE00DD6156 /* DBManager.swift */,
 			);
 			path = SQLite;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				043BDC1D2FCECF5E002F0817 /* AppDelegate.swift in Sources */,
 				043BDC1E2FCECF5E002F0817 /* SceneDelegate.swift in Sources */,
 				043BDC1F2FCECF5E002F0817 /* ViewController.swift in Sources */,
+				0451E7672FD002EE00DD6156 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
