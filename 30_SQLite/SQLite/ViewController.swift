@@ -25,8 +25,8 @@ class ViewController: UIViewController {
         title = "数据列表"
         // 设置导航栏按钮
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddUserAlertController))
-        // 创建表
-        DBManager.createTable(kTableName, "name TEXT, password TEXT")
+//        // 创建表
+//        DBManager.createTable(kTableName, "name TEXT, password TEXT")
         // 创建视图
         setupSubviews()
     }
