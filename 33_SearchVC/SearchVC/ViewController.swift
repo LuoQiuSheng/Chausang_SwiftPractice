@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var searchController: UISearchController!
     var searchResultTableViewController: SearchResultTableViewController!
     
+    var isSearch: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 设置标题
@@ -98,6 +100,17 @@ class ViewController: UIViewController {
         return transformPinyin as String
     }
     
+    // 选中处理
+    private func didSelectRowAt(_ indexPath: IndexPath) {
+        let showVC = ShowProvinceDetailViewController()
+        if isSearch {
+            showVC.province = searchResultTableViewController.dataSource[indexPath.row]
+        } else {
+            showVC.province = dataSource[indexPath.row]
+        }
+        self.navigationController?.pushViewController(showVC, animated: true)
+    }
+    
 }
 
 
@@ -111,6 +124,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        // 选中处理
+        didSelectRowAt(indexPath)
     }
     
     // MARK: - UITableViewDataSource
@@ -127,7 +142,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let data = dataSource[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         cell.textLabel?.text = data.name
-        cell.textLabel?.textColor = .orange
+        cell.textLabel?.textColor = .black
         return cell
     }
 }
@@ -154,6 +169,7 @@ extension ViewController: UISearchBarDelegate, UISearchControllerDelegate, UISea
     
     // 已经出现
     func didPresentSearchController(_ searchController: UISearchController) {
+        isSearch = true
     }
     
     // 将要消失
@@ -162,6 +178,7 @@ extension ViewController: UISearchBarDelegate, UISearchControllerDelegate, UISea
     
     // 已经消失
     func didDismissSearchController(_ searchController: UISearchController) {
+        isSearch = false
     }
     
     // MARK: - UISearchResultsUpdating
