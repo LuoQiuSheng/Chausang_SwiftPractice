@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var searchController: UISearchController!
     var searchResultTableViewController: SearchResultTableViewController!
     
-    var isSearch: Bool = false
+    var isSearching: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
     // 选中处理
     private func didSelectRowAt(_ indexPath: IndexPath) {
         let showVC = ShowProvinceDetailViewController()
-        if isSearch {
+        if isSearching {
             showVC.province = searchResultTableViewController.dataSource[indexPath.row]
         } else {
             showVC.province = dataSource[indexPath.row]
@@ -169,7 +169,7 @@ extension ViewController: UISearchBarDelegate, UISearchControllerDelegate, UISea
     
     // 已经出现
     func didPresentSearchController(_ searchController: UISearchController) {
-        isSearch = true
+        isSearching = true
     }
     
     // 将要消失
@@ -178,7 +178,7 @@ extension ViewController: UISearchBarDelegate, UISearchControllerDelegate, UISea
     
     // 已经消失
     func didDismissSearchController(_ searchController: UISearchController) {
-        isSearch = false
+        isSearching = false
     }
     
     // MARK: - UISearchResultsUpdating
