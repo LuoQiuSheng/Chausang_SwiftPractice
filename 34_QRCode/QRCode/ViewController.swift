@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 import SnapKit
 
 class ViewController: UIViewController {
@@ -49,6 +50,46 @@ class ViewController: UIViewController {
         
     }
     
+    // 检查相机权限
+    private func checkCameraPermisson() {
+        let status = AVCaptureDevice.authorizationStatus(for: .video)
+        switch status {
+        case .restricted, .denied:
+            // 弹出相机权限设置提示
+            showNoCameraPermissionAlert()
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { (isAllow) in
+                if isAllow {
+                    // 跳转到扫描页面
+                    self.pustToScanViewController()
+                }
+                else {
+                    // 弹出相机权限设置提示
+                    self.showNoCameraPermissionAlert()
+                }
+            }
+        default:
+            // 跳转到扫描页面
+            pustToScanViewController()
+        }
+    }
+    
+    // 弹出相机权限设置提示
+    private func showNoCameraPermissionAlert() {
+        let alert = UIAlertController(title: "相机权限未开启", message: "前往设置开启相机权限才能扫码", preferredStyle: .alert)
+        alert.addAction(.init(title: "取消", style: .cancel))
+        alert.addAction(.init(title: "去设置", style: .default, handler: { _ in
+            guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+            UIApplication.shared.open(url)
+        }))
+        present(alert, animated: true)
+    }
+    
+    // 跳转到扫描页面
+    private func pustToScanViewController() {
+        navigationController?.pushViewController(ScanViewController(), animated: true)
+    }
+    
     // MARK: - Action
     
     @objc private func buttonAction(_ sender: UIButton) {
@@ -56,7 +97,8 @@ class ViewController: UIViewController {
         
         switch sender.currentTitle! {
         case "扫描二维码":
-            navigationController?.pushViewController(ScanViewController(), animated: true)
+            // 检查相机权限
+            checkCameraPermisson()
         case "图片获取":
             navigationController?.pushViewController(ImageScanViewController(), animated: true)
         default:
