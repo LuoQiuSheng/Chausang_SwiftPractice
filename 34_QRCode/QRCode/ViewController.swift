@@ -93,8 +93,6 @@ class ViewController: UIViewController {
     // MARK: - Action
     
     @objc private func buttonAction(_ sender: UIButton) {
-        print("点击了：\(sender.currentTitle!)")
-        
         switch sender.currentTitle! {
         case "扫描二维码":
             // 检查相机权限

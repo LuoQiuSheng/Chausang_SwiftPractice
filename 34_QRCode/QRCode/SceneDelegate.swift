@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let nav = UINavigationController(rootViewController: ViewController())
+//        nav.navigationBar.tintColor = .black
         
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = nav
