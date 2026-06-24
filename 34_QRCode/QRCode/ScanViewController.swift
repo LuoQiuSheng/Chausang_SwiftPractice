@@ -156,6 +156,8 @@ extension ScanViewController: AVCaptureMetadataOutputObjectsDelegate {
               let result = metadata.stringValue else {
             return
         }
+        // 标记
+        isHandlingResult = true
         // 结束扫描
         stopSession()
         // 提醒
